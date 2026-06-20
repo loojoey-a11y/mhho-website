@@ -66,9 +66,8 @@ export default function PrivacyPage() {
         <Heading>3. Who handles your data</Heading>
         <p>Personal data is handled by MHHO administrators. To deliver the services described above, your data may be processed by the following service providers, acting on our behalf:</p>
         <ul>
-          <li><strong>Hostinger</strong> &mdash; website hosting infrastructure;</li>
-          <li><strong>Resend</strong> &mdash; transactional email delivery for contact-form messages (when configured);</li>
-          <li><strong>Google</strong> &mdash; only if you choose to activate the Google Translate widget at the top of the page; the widget is loaded from Google&rsquo;s servers and may set its own cookies.</li>
+          <li><strong>Vercel</strong> &mdash; website hosting infrastructure;</li>
+          <li><strong>Google</strong> &mdash; we receive and store enquiry emails you send us through our Gmail address; additionally, only if you choose to activate the Google Translate widget at the top of the page, the widget is loaded from Google&rsquo;s servers and may set its own cookies.</li>
         </ul>
         <p>Aside from these processors, we do not disclose your personal data to third parties except where required by law.</p>
 

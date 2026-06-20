@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { SectionEyebrow } from "@/components/section";
-import { ContactForm } from "@/components/contact-form";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = {
@@ -42,13 +41,30 @@ export default function ContactPage() {
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-7">
             <div className="rounded-3xl border border-border bg-white p-7 sm:p-10 shadow-sm">
-              <h2 className="font-serif text-2xl text-sage-900">Send us a message</h2>
-              <p className="mt-2 text-sm text-foreground/65">
-                Required fields are marked with <span className="text-clay-500">*</span>.
+              <h2 className="font-serif text-2xl text-sage-900">Email us directly</h2>
+              <p className="mt-3 text-foreground/75 leading-relaxed">
+                For enquiries about a specific modality, appointments, or practitioner partnerships, send us an email and we&rsquo;ll respond within two working days.
               </p>
-              <div className="mt-6">
-                <ContactForm />
-              </div>
+              <a
+                href={`mailto:${siteConfig.contact.email}?subject=${encodeURIComponent(
+                  "Enquiry from mhhocenter.com"
+                )}`}
+                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-sage-700 hover:bg-sage-800 transition-colors px-6 py-3 text-sm font-medium text-white"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                Email {siteConfig.contact.email}
+              </a>
+              <p className="mt-4 text-xs text-foreground/60 leading-relaxed">
+                Prefer your own email app? Write to us at{" "}
+                <a href={`mailto:${siteConfig.contact.email}`} className="underline hover:text-sage-700">
+                  {siteConfig.contact.email}
+                </a>
+                . You can also{" "}
+                <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" className="underline hover:text-sage-700">
+                  message us on Facebook
+                </a>
+                .
+              </p>
             </div>
           </div>
 
